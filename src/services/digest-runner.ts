@@ -27,9 +27,9 @@ async function runDigestForUser(userId: string) {
 
   const userContext: UserContext = {
     name: user.name || "there",
-    role: user.profile?.role,
+    role: user.profile?.role ?? undefined,
     interests: user.profile?.interests || [],
-    context: user.profile?.context,
+    context: user.profile?.context ?? undefined,
   };
 
   const sections = [];
