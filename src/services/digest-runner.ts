@@ -69,7 +69,7 @@ async function runDigestForUser(userId: string) {
   await prisma.digest.create({
     data: {
       userId: user.id,
-      content: sections,
+      content: sections as any,
       htmlBody: html,
       sentAt: new Date(),
     },
